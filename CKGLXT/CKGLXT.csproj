@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31777493-74BE-4D67-9350-CF87E1132FB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CKGLXT</RootNamespace>
+    <AssemblyName>CKGLXT</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FuChuanTiFrom">
+      <HintPath>..\WaiBuDLL\FuChuanTiFrom.dll</HintPath>
+    </Reference>
+    <Reference Include="GongJuJiHe">
+      <HintPath>..\WaiBuDLL\GongJuJiHe.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\WaiBuDLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIChuanTi">
+      <HintPath>..\WaiBuDLL\UIChuanTi.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.2.878, Culture=neutral, PublicKeyToken=02a83cbd123fcd60" />
+    <Reference Include="ZiDingYiKongJian, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WaiBuDLL\ZiDingYiKongJian.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBFanWen\ABSSqlDBLianJie.cs" />
+    <Compile Include="DBFanWen\DanLiFanWenDB.cs" />
+    <Compile Include="DBFanWen\MySqlLianJieQi.cs" />
+    <Compile Include="DBFanWen\SqlPingJieQi.cs" />
+    <Compile Include="DBFanWen\StaicLei.cs" />
+    <Compile Include="KongJian\DataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MianFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MianFrom.Designer.cs">
+      <DependentUpon>MianFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataModel\HuWuBiao.cs" />
+    <Compile Include="Model\DataModel\JieChuBiao.cs" />
+    <Compile Include="Model\DataModel\JieChuZuHeModel.cs" />
+    <Compile Include="Model\DataModel\YuanGongBiao.cs" />
+    <Compile Include="Model\DataModel\YuYueBiao.cs" />
+    <Compile Include="Model\DataModel\YuYueZuHeModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XianShiData\BaoFeiFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\BaoFeiFrom.Designer.cs">
+      <DependentUpon>BaoFeiFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\ChaZhaoFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\ChaZhaoFrom.Designer.cs">
+      <DependentUpon>ChaZhaoFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\DaiWeiHuFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\DaiWeiHuFrom.Designer.cs">
+      <DependentUpon>DaiWeiHuFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\GuiHaiFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\GuiHaiFrom.Designer.cs">
+      <DependentUpon>GuiHaiFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\GuiHaiJiLuFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\GuiHaiJiLuFrom.Designer.cs">
+      <DependentUpon>GuiHaiJiLuFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\JieChuChaKanFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\JieChuChaKanFrom.Designer.cs">
+      <DependentUpon>JieChuChaKanFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\ChaKanYuYueFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\ChaKanYuYueFrom.Designer.cs">
+      <DependentUpon>ChaKanYuYueFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\JieChuCaoZuoFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\JieChuCaoZuoFrom.Designer.cs">
+      <DependentUpon>JieChuCaoZuoFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\RuKuFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\RuKuFrom.Designer.cs">
+      <DependentUpon>RuKuFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\XianShiShuJu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\XianShiShuJu.Designer.cs">
+      <DependentUpon>XianShiShuJu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XianShiData\YuYueCaoZuoFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XianShiData\YuYueCaoZuoFrom.Designer.cs">
+      <DependentUpon>YuYueCaoZuoFrom.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MianFrom.resx">
+      <DependentUpon>MianFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="XianShiData\BaoFeiFrom.resx">
+      <DependentUpon>BaoFeiFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\ChaZhaoFrom.resx">
+      <DependentUpon>ChaZhaoFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\DaiWeiHuFrom.resx">
+      <DependentUpon>DaiWeiHuFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\GuiHaiFrom.resx">
+      <DependentUpon>GuiHaiFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\GuiHaiJiLuFrom.resx">
+      <DependentUpon>GuiHaiJiLuFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\JieChuChaKanFrom.resx">
+      <DependentUpon>JieChuChaKanFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\ChaKanYuYueFrom.resx">
+      <DependentUpon>ChaKanYuYueFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\JieChuCaoZuoFrom.resx">
+      <DependentUpon>JieChuCaoZuoFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\RuKuFrom.resx">
+      <DependentUpon>RuKuFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\XianShiShuJu.resx">
+      <DependentUpon>XianShiShuJu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XianShiData\YuYueCaoZuoFrom.resx">
+      <DependentUpon>YuYueCaoZuoFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
